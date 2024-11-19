@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .disease-item {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Plant Disease Detection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="library.html">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Plant Disease Library</h2>
+        <p class="lead">Find detailed information on various plant diseases, their symptoms, treatments, and prevention methods.</p>
+        <input type="text" id="searchInput" class="form-control" placeholder="Search for a disease..." onkeyup="searchDisease()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease List Section -->
+  <div class="container mt-5">
+    <div class="row" id="diseaseList">
+      <!-- Disease 1 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-1.webp" alt="Disease 1" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Powdery Mildew</h4>
+            <p class="card-text">A fungal disease that affects many plants, causing a white powdery coating on leaves and stems.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicide like sulfur or neem oil.</li>
+              <li>Remove infected leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Ensure proper spacing between plants for air circulation.</li>
+              <li>Water at the base of plants to avoid wetting the leaves.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 2 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-2.webp" alt="Disease 2" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Leaf Spot</h4>
+            <p class="card-text">A bacterial or fungal infection that causes spots on the leaves, leading to yellowing and early leaf drop.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Use copper-based fungicides or bactericides.</li>
+              <li>Prune affected leaves and dispose of them properly.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Water in the morning to allow leaves to dry before nightfall.</li>
+              <li>Ensure proper spacing for air circulation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 3 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-3.jpg" alt="Disease 3" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Blight</h4>
+            <p class="card-text">A disease caused by various fungi or bacteria that affects leaves, stems, and fruits, causing rapid tissue decay.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides or bactericides specific to the cause of the blight.</li>
+              <li>Remove infected plants and debris.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Practice crop rotation to avoid soil-borne pathogens.</li>
+              <li>Water plants at the base to avoid wetting the foliage.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 4 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-4.jpg" alt="Disease 4" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Root Rot</h4>
+            <p class="card-text">A disease caused by fungi or bacteria that attack the roots, causing the plant to wilt and eventually die.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Remove infected plants and dispose of them properly.</li>
+              <li>Use a fungicide for root rot treatment.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Ensure proper drainage in the soil.</li>
+              <li>Avoid over-watering plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 5 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-5.webp" alt="Disease 5" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Rust</h4>
+            <p class="card-text">A fungal disease characterized by reddish-brown spots on the leaves, causing the plant to weaken.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides such as copper-based or systemic fungicides.</li>
+              <li>Remove and destroy infected leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Practice crop rotation to avoid rust build-up.</li>
+              <li>Ensure good air circulation around plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 6 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="images/li-6.jpg" alt="Disease 6" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Anthracnose</h4>
+            <p class="card-text">A fungal disease that affects fruits, flowers, and stems, causing dark lesions and dieback.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Use fungicides to control the spread.</li>
+              <li>Remove infected plant parts and destroy them.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Water plants early in the day.</li>
+              <li>Provide good airflow to reduce moisture levels.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="container mt-5">
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="mb-0">&copy; 2024 Plant Disease Detection. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
