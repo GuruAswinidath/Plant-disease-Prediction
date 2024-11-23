@@ -1,0 +1,111 @@
+{% extends 'myapp/base.html' %}
+{%load static%}
+
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-12 text-center mb-4">
+    <h1>About Plant Disease Prediction</h1>
+    <p class="lead">Discover how modern technology helps in identifying plant diseases and promoting sustainable farming practices.</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row mt-3">
+    <div class="col-md-6">
+        <img src="{% static 'myapp/images/about-2.jpg' %}" alt="Plant Disease Prediction" class="img-fluid rounded shadow" style="max-width: 400px; margin-left: 150px;">
+    </div>
+    <div class="col-md-6">
+        <h2>What is Plant Disease Prediction?</h2>
+        <p>
+        Plant disease Prediction is a process that leverages advanced technologies such as machine learning, artificial intelligence (AI), and image processing to identify diseases in crops. By analyzing images of plants and their symptoms, these systems can detect and classify various plant diseases with high accuracy.
+        </p>
+        <p>
+        Early Prediction of plant diseases plays a crucial role in ensuring healthy crops, minimizing yield losses, and promoting sustainable agricultural practices.
+        </p>
+    </div>
+    </div>
+</div>
+
+<div class="container mt-3 mb-5">
+        <!-- Features Section -->
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h2>Key Features</h2>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-1.jpg'%}" alt="Accurate Diagnosis" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Accurate Diagnosis</h4>
+                <p>Advanced image analysis ensures precise identification of plant diseases, even at early stages.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-3.png'%}" alt="Real-Time Monitoring" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Real-Time Monitoring</h4>
+                <p>Track plant health with real-time data for better decision-making and disease management.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-4.jpg'%}" alt="Cost-Effective" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Cost-Effective</h4>
+                <p>Save time and resources by identifying issues early and reducing unnecessary pesticide use.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'myapp/images/services-1.png'%}" alt="Sustainable Farming" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8 text-center">
+            <h2>Get Started</h2>
+            <p>
+                Join us in advancing sustainable farming with the power of technology. Explore our services and learn how you can contribute to healthier crops and a better environment.
+            </p>
+            <a href="{% url 'services'%}" class="btn btn-success btn-lg">Explore Services</a>
+        </div>
+    </div>
+</div>
+
+<!-- Additional Information Section -->
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-4 order-md-2">
+            <img src="{% static 'myapp/images/about-5.jpg'%}" alt="Plant Disease Resources" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8 text-center order-md-1">
+            <h3>Discover Our Resources</h3>
+            <p>
+                We provide a comprehensive list of plant diseases and their corresponding treatments, including prescription medicines to address specific issues. Visit our library to access this valuable information and enhance your knowledge of plant health.
+            </p>
+            <a href="{% url 'library'%}" class="btn btn-primary btn-lg">Visit Library</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-md-12 text-center">
+        <h3>Need More Information?</h3>
+        <p>
+        Have questions or need assistance? We’re here to help! Reach out to us for more information on plant disease Prediction, sustainable farming practices, or any other inquiries.
+        </p>
+        <a href="{% url 'contact'%}" class="btn btn-outline-secondary btn-lg">Contact Us</a>
+    </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

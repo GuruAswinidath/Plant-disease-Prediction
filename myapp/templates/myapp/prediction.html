@@ -1,0 +1,22 @@
+{% extends 'myapp/base.html' %}
+{%load static%}
+{% block title %}Plant Disease Prediction{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Plant Disease Prediction</h2>
+    <p>Upload an image of a plant leaf to predict possible diseases.</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="plant_image">Upload Plant Image</label>
+            <input type="file" class="form-control" id="plant_image" name="plant_image" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if prediction %}
+    <h3>Prediction Result:</h3>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</div>
+{% endblock %}

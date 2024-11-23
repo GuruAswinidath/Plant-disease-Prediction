@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Plant Disease Prediction{% endblock %}</title>
+  <link href="{% static 'myapp/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'myapp/css/styles.css'  %}" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'landing' %}">Plant Disease Prediction</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'library' %}">Library</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <div class="container-fluid bg-success text-white py-4 mt-3">
+    <div class="row">
+        <!-- Newsletter Heading and Description -->
+         <div class="col-md-8">
+            <h2 class="text-uppercase">Newsletter</h2>
+            <p>Stay updated with the latest news, tips, and insights. Subscribe to our newsletter and never miss an update!</p>
+          </div>
+        
+        <!-- Newsletter Subscription Form -->
+        <div class="col-md-4">
+            <form class="newsletter-form" action="{% url 'newsletter_signup' %}" method="post" id="newsletterForm">
+                {% csrf_token %}
+                <div class="input-group">
+                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </div>
+            </form>        
+        </div>
+      </div>
+    </div>
+
+  <!-- Modal for Thank You Message -->
+  <div id="thankYouModal" class="modal">
+      <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h3>Thank you for subscribing!</h3>
+          <p>You will receive updates soon.</p>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2024 Plant Disease Prediction. All Rights Reserved.</p>
+  </footer>
+
+  <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'myapp/js/scripts.js' %}"></script>
+  <script src="{% static 'myapp/js/popup.js' %}"></script>
+  <script src="https://kit.fontawesome.com/13fb50b57d.js" crossorigin="anonymous"></script>
+</body>
+</html>

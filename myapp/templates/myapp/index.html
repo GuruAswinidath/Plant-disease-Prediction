@@ -1,0 +1,54 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Index{% endblock %}
+{% block content %}
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="form-wrapper d-flex justify-content-around">
+      <!-- Login Form -->
+      <div class="form-container">
+        <h4 class="text-center mb-3">Login</h4>
+        <form>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+
+      <!-- Sign-Up Form -->
+      <div class="form-container">
+        <h4 class="text-center mb-3">Sign Up</h4>
+        <form>
+          <div class="mb-3">
+            <label for="signUpName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="signUpName" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="signUpEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="signUpPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password">
+          </div>
+          <div class="mb-3">
+            <label for="signUpPlace" class="form-label">Place</label>
+            <input type="text" class="form-control" id="signUpPlace" placeholder="Enter your place">
+          </div>
+          <div class="mb-3">
+            <label for="signUpAddress" class="form-label">Address</label>
+            <textarea class="form-control" id="signUpAddress" rows="3" placeholder="Enter your address"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    <p style="text-align: center;">For the Main Website, please visit <a href="about.html">Plant Disease prediction</a></p>
+  </div>
+{% endblock %}
