@@ -34,35 +34,29 @@
     {% endblock %}
   </div>
 
-  <div class="container-fluid bg-success text-white py-4 mt-3">
+  <div class="container-fluid bg-success mt-3 mb-3">
+    <h2 class="text-white">Newsletter</h2>
     <div class="row">
-        <!-- Newsletter Heading and Description -->
-         <div class="col-md-8">
-            <h2 class="text-uppercase">Newsletter</h2>
-            <p>Stay updated with the latest news, tips, and insights. Subscribe to our newsletter and never miss an update!</p>
-          </div>
-        
-        <!-- Newsletter Subscription Form -->
-        <div class="col-md-4">
-            <form class="newsletter-form" action="{% url 'newsletter_signup' %}" method="post" id="newsletterForm">
-                {% csrf_token %}
-                <div class="input-group">
-                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
-                    <button type="submit" class="btn btn-dark">Subscribe</button>
-                </div>
-            </form>        
+        <div class="col-md-8">
+            <p class="text-white">Subscribe to our newsletter for the latest updates!</p>
         </div>
-      </div>
+        <div class="col-md-4">
+            <form id="newsletterForm">
+                {% csrf_token %}
+                <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
     </div>
+</div>
 
-  <!-- Modal for Thank You Message -->
-  <div id="thankYouModal" class="modal">
-      <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
-          <h3>Thank you for subscribing!</h3>
-          <p>You will receive updates soon.</p>
-      </div>
-  </div>
+<!-- Modal for Thank You Message -->
+<div id="thankYouModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modalMessage">Thank you for subscribing!</h3>
+    </div>
+</div>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">

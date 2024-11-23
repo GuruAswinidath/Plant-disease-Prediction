@@ -9,5 +9,5 @@ urlpatterns = [
     path('library/', views.library, name='library'),
     path('prediction/', views.prediction, name='prediction'),
     path('services/', views.services, name='services'), 
-     path('newsletter/signup/', views.newsletter_signup, name='newsletter_signup'),
 ]
+
