@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Disease Prediction</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script>
+    function predictDisease(event) {
+      event.preventDefault(); // Prevent form submission
+      const plantName = document.getElementById("plantName").value;
+
+      // Simulating disease prediction result
+      const diseaseName = "Leaf Spot"; // Example result
+      alert(`Plant Name: ${plantName}\nPredicted Disease: ${diseaseName}`);
+    }
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Plant Disease Detection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="library.html">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="prediction.html">Prediction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Plant Disease Prediction</h1>
+        <p class="lead">Enter the details and upload an image of the plant to predict its disease.</p>
+      </div>
+    </div>
+    <form onsubmit="predictDisease(event)">
+      <div class="row mt-4">
+        <!-- Plant Name -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="plantName" class="form-label">Plant Name</label>
+            <input type="text" class="form-control" id="plantName" name="plantName" placeholder="Enter the plant name" required>
+          </div>
+        </div>
+        <!-- Place -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="plantPlace" class="form-label">Place</label>
+            <input type="text" class="form-control" id="plantPlace" name="plantPlace" placeholder="Enter the plant location" required>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <!-- Image Upload -->
+        <div class="col-md-12">
+          <div class="mb-3">
+            <label for="plantImage" class="form-label">Upload Plant Image</label>
+            <input type="file" class="form-control" id="plantImage" name="plantImage" accept="image/*" required>
+          </div>
+        </div>
+      </div>
+      <!-- Submit Button -->
+      <div class="row mt-4">
+        <div class="col-md-12 text-center">
+          <button type="submit" class="btn btn-success btn-lg">Predict Disease</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2024 Plant Disease Detection. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

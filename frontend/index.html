@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: green;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Plant Disease Detection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">services</a>
+          <li class="nav-item">
+            <a class="nav-link" href="library.html">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <div class="form-wrapper d-flex justify-content-around">
+      <!-- Login Form -->
+      <div class="form-container">
+        <h4 class="text-center mb-3">Login</h4>
+        <form>
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+
+      <!-- Sign-Up Form -->
+      <div class="form-container">
+        <h4 class="text-center mb-3">Sign Up</h4>
+        <form>
+          <div class="mb-3">
+            <label for="signUpName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="signUpName" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="signUpEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="signUpPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password">
+          </div>
+          <div class="mb-3">
+            <label for="signUpPlace" class="form-label">Place</label>
+            <input type="text" class="form-control" id="signUpPlace" placeholder="Enter your place">
+          </div>
+          <div class="mb-3">
+            <label for="signUpAddress" class="form-label">Address</label>
+            <textarea class="form-control" id="signUpAddress" rows="3" placeholder="Enter your address"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    <p style="text-align: center;">For the Main Website, please visit <a href="about.html">Plant Disease Detection</a></p>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
